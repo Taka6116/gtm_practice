@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後藤 孝 | Takashi Goto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- 自己紹介サイトのCSS -->
+<link rel="stylesheet" href="自己紹介サイト.css">
+
+    
+ 
+        
+.vision-statement {
+    text-align: center;
+    margin-bottom: 3rem;  
+
+    <!-- ここに消したものを入れる -->
+     <style>
+
+
+/* ========================================
+   Image Slider Section
+   ======================================== */
+
+/* ========================================
+   Vision Section
+   ======================================== */
+.vision-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: #ffffff;
+}
+
+/* 新しいリスト要素のスタイルを定義 */
+.pillar-list {
+    list-style: none; /* 行頭の黒丸を非表示にする */
+    padding-left: 0; /* ulタグにデフォルトで付く左側の余白を削除 */
+    margin: 0; /* ulタグにデフォルトで付く上下の余白も削除 */
+}
+
+/* 箇条書き風にするために、リストアイテム（li）の前に文字を挿入 */
+.pillar-list li {
+    position: relative;
+    padding-left: 1.2rem; /* 挿入した文字のための左余白 */
+    margin-bottom: 0.7rem; /* リストアイテム間の縦のスペース */
+    line-height: 1.7; /* 行の高さを調整して読みやすく */
+    color: rgba(255, 255, 255, 0.9); /* 元のpタグの文字色に合わせる */
+    font-size: 1.05rem; /* 見た目を調整 */
+}
+
+/* 擬似要素を使って行頭に「・」を配置 */
+.pillar-list li::before {
+    content: '・'; /* 「・」を挿入 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-color); /* アクセントカラー（金色）にする */
+    font-weight: bold;
+}
+        
+.vision-section .section-title {
+    color: #ffffff;
+}
+
+.vision-section .section-title::after {
+    background: var(--accent-color);
+}
+
+.vision-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Vision Section に追加 */
+/* -------------------------------------- */
+
+.vision-goals-title {
+    font-size: 1.5rem; /* 大きさ調整 (pillar-title: 1.3rem, vision-quote: 2.5rem) */
+    font-weight: 600; 
+    color: var(--accent-color); /* 色をアクセントカラーに */
+    text-align: center; /* 中央揃え */
+    margin-bottom: 1.5rem; /* 下に余白 */
+    margin-top: 1rem; /* 上に余白（調整用） */
+    font-family: 'Montserrat', sans-serif; /* Montserratフォントを使用 */
+    letter-spacing: 1px;
+}
+
+/* 768px以下のモバイル表示時の文字サイズ調整（既存のメディアクエリに合わせる） */
+@media (max-width: 768px) {
+    .vision-goals-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+}
+}
+
+.vision-quote {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.vision-description {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.vision-text {
+    margin-bottom: 1.5rem;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.vision-text:last-child {
+    margin-bottom: 0;
+}
+
+.vision-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.pillar {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+}
+
+.pillar:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.pillar-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pillar-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pillar-text {
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ========================================
+   Footer
+   ======================================== */
+.footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.social-link:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 1s ease;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow-lg);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-name-en {
+        font-size: 1.3rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .slide-item {
+        width: 150px;
+        height: 150px;
+        margin: 0 1rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-item {
+        padding-left: 2rem;
+    }
+
+    .vision-quote {
+        font-size: 1.8rem;
+    }
+
+    .vision-pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-name-en {
+        font-size: 1.1rem;
+        letter-spacing: 3px;
+    }
+
+    .slide-item {
+        width: 120px;
+        height: 120px;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .vision-quote {
+        font-size: 1.5rem;
+    }
+}
+    </style>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K3ZG8RBS');</script>
+<!-- End Google Tag Manager -->
+
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3ZG8RBS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">TG</div>
+            <ul class="nav-menu" id="nav-menu">
+               <li><a href="index.html" class="nav-link active">Home</a></li>
+               <li><a href="About.html" class="nav-link">About</a></li>
+               <li><a href="Career.html" class="nav-link">Career</a></li>
+               <li><a href="Vision.html" class="nav-link">Vision</a></li>
+                <!--<li><a href="#contact" class="nav-link">Contact</a></li>-->
+
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text fade-in">
+                <p class="hero-subtitle">Bridging Cultures, Delivering Value</p>
+                <img src="images/IMG_8352.JPG" alt="後藤孝の写真" class="profile-photo">
+
+                <h1 class="hero-title">後藤 孝</h1>
+                <h2 class="hero-name-en">Takashi Goto</h2>
+                <p class="hero-description">
+                    言語と文化を超えて、価値を届ける
+                </p>
+        </div>　　　　</div>  </section>
+        
+    </section>
+    
+    <div class="fixed-hero-buttons">
+        <a href="About.html" class="btn-primary fixed-btn">Discover More</a>
+        <button id="like-button" class="like-btn fixed-btn">👍 Good</button>
+    </div>
+    <section class="image-slider-section">
+// ...
+    <!-- Image Slider Section -->
+    <section class="image-slider-section">
+        <h3 class="slider-title">My Inspirations</h3>
+        <div class="slider-container">
+            <div class="slider-track" id="slider-track">
+                <!-- 画像アイテム（2セット用意して無限ループを実現） -->
+                <div class="slide-item">
+                     <img src="images/IMG_8361.jpg" alt="具体と抽象" class="profile-img">
+                </div>
+                <div class="slide-item">
+                   <img src="images/IMG_8362.jpg" alt="コンサル一年目が学ぶこと" class="profile-img">
+                </div>
+                <div class="slide-item">
+                    <img src="images/IMG_8363.jpg" alt="行動経済学が最強の学問である" class="profile-img">
+                </div>
+                <div class="slide-item">
+                  <img src="images/IMG_8365.jpg" alt="嵐" class="profile-img">
+                </div>
+                <div class="slide-item">
+                  <img src="images/IMG_8366.jpg" alt="Mrs.Green Apple" class="profile-img">
+                </div>
+                <div class="slide-item">
+                    <img src="images/IMG_8367.jpg" alt="自分の写真@ディズニー" class="profile-img">
+                </div>
+　　　　　　　　<div class="slide-item">
+                    <img src="images/IMG_8416.jpg" alt="ISSUEから始めよ" class="profile-img">
+                </div>
+　　　　　　　　<div class="slide-item">
+                    <img src="images/IMG_8347.JPG" alt="自分の写メ サッカー" class="profile-img">
+                </div>
+                <div class="slide-item">
+                    <img src="images/IMG_USJ.jpg" alt="USJ" class="profile-img">
+                </div>
+                <div class="slide-item">
+                    <img src="images/IMG_8417.jpg" alt="レアル" class="profile-img">
+                </div>
+　　　　　　　　<div class="slide-item">
+                    <img src="images/IMG_仮説思考.jpg" alt="仮説思考" class="profile-img">
+                </div>
+
+    </section>
+
+
+    </footer>
+  <script defer src="自己紹介サイト.js"></script>
+    
+
+</body>
+</html>
